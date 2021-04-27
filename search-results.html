@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Service - Search Results</title>
+
+    <!--Stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel='stylesheet' href='css/styles.css'>
+    <link rel="stylesheet" href="css/chips.css">
+    <link rel="shortcut icon" href="img/icon-ellucian.png">
+    <!--JS-->
+    <script src="https://kit.fontawesome.com/ff6a5bc11f.js" crossorigin="anonymous" async></script>
+</head>
+
+<body class="bg-light">
+    <!--NAV-->
+    <div id="nav-bar"></div>
+
+    <!--MAIN-->
+    <main class="container my-5" id="container">
+        <div class="col">
+            <div class="row justify-content-md-center">
+                <div class="col-11">
+                    <h2 class="title fw-bolder">Course</h2>
+                </div>
+                <div id="search-and-results" class="col-7">
+                    <div id="search" name="search" class="my-1">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-1 row d-flex justify-content-center">
+                                        <div class="col-sm-10 input-group">
+                                            <input type="text" class="form-control inputfield-custom" id="txtKeyword"
+                                                name="keyword" placeholder="Keyword">
+                                            <img type="submit" class="input-group-text search-icon"
+                                                style="background: url('img/search.png') no-repeat 1px 16px;"></img>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="mb-2 row">
+                                    <div class="col d-flex justify-content-between">
+                                        <a type="button" class="btn btn-link text-decoration-none px-0"
+                                            data-bs-toggle="modal" data-bs-target="#advancedSearch">Advanced
+                                            search</a>
+                                        <a href="index.html" type="button"
+                                            class="btn btn-link text-decoration-none px-0">New
+                                            search</a>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <div class="col-md-auto pe-0" id="results-for">Showing results for </div>
+                                    <div class="col" id="results-for-showing">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results section -->
+                    <section class="my-3" id="search-results" name="search-results">
+                        <div class="d-flex align-items-end flex-column" id="share-results">
+                            <div class="mb-3"><span class="text-primary"></span></div>
+                            <div class="mb-3 results" id="results-summary"></div>
+                        </div>
+                        <div id="manageState"></div>
+                        <!-- Inject results-->
+                    </section>
+                </div>
+
+                <!-- Filters -->
+                <section class="col-md-4 d-flex flex-column align-self-start" id="filters" name="filters">
+                    <div class="card shadow mb-2 mt-1">
+                        <div class="card-body">
+                            <h3 class="mx-3 card-title fw-bolder" id="lblFilterTitle">Filters</h3>
+                            <div class="flex-columns" id="filter-column">
+                                <!--Inject filters-->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Advanced search modal -->
+        <div id="mdlAdvancedSearch"></div>
+
+        <!-- Course details modal -->
+        <div id="mdlCourseDetails"></div>
+
+    </main>
+
+    <!--JSONs-->
+    <script type="text/javascript" src="js/Courses.js"></script>
+
+    <!--JS: Bootstrap JS, Popper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/KeepParams.js" defer></script>
+    <script type="text/javascript" src="js/SearchSpecific.js" defer></script>
+    <script>
+        $("#nav-bar").load("navbar.html");
+        $("#mdlAdvancedSearch").load("modal.html");
+        $("#mdlCourseDetails").load("courseDetailsModal.html");
+    </script>
+    <script type="text/javascript" src="js/LateralFiltersLogic.js" defer></script>
+    <script type="text/javascript" src="js/ChipsBehavior.js" defer></script>
+    <script type="text/javascript" src="js/DynamicRender.js" defer></script>
+</body>
+
+</html>

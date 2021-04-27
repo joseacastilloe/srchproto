@@ -1,0 +1,147 @@
+<div class="modal fade" id="advancedSearch" tabindex="-1" aria-labelledby="advancedSearchLabel" aria-hidden="true">
+    <div class="modal modal-lg modal-dialog-scrollable modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title fw-bold" id="lblAdvancedSearch">Advanced Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="search-results.html" method="GET">
+                    <div class="row g-3 ms-2 me-2">
+                        <div class="col form-floating">
+                            <input id="txtKeywordModal" type="text" class="form-control" aria-label="Keyword"
+                                placeholder="Course Name" name="keyword">
+                            <label for="txtKeyword">Keyword</label>
+                        </div>
+                        <div class="col form-floating">
+                            <input id="txtCourseCode" type="text" class="form-control" aria-label="Course Code"
+                                placeholder="Course Code" name="course_code">
+                            <label for="txtCourseCode">Course Code</label>
+                        </div>
+                    </div>
+
+                    <div class="modal-header ps-0 mb-3">
+                        <p class="modal-title fw-bold me-0 ps-0">Course Details</p>
+                    </div>
+
+                    <div class="row g-3 m-2">
+                        <div class="col form-floating">
+                            <select id="ddlProgram" class="form-select dropdowns" aria-label="Program" name="program">
+                                <option label="Select..."></option>
+                                <option value="Graduate">Graduate</option>
+                                <option value="Undergraduate">Undergraduate</option>
+                            </select>
+                            <label for="ddlProgram">Program</label>
+                        </div>
+                        <div class="col form-floating dropdown1">
+                            <select id="ddlCurriculum" class="form-select dropdowns" aria-label="Curriculum" name="curriculum">
+                                <option label="Select..."></option>
+                                <option value="Art Appreciation">Art Appreciation</option>
+                                <option value="Art Law and Business">Art Law and Business</option>
+                                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                <option value="Biochemistry">Biochemistry</option>
+                                <option value="Literature">Literature</option>
+                                <option value="Materials and Technics">Materials and Technics</option>
+                                <option value="Photography">Photography</option>
+                                <option value="Web Programming">Web Programming</option>
+                            </select>
+                            <label for="ddlCurriculum">Curriculum</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-2">
+                        <div class="col form-floating">
+                            <select id="ddlSubtype" class="form-select dropdowns" aria-label="Subtype" name="subtype">
+                                <option label="Select..."></option>
+                                <option value="Lab">Lab</option>
+                                <option value="Lecture">Lecture</option>
+                                <option value="Seminar">Seminar</option>
+                                <option value="Workshop">Workshop</option>
+                            </select>
+                            <label for="ddlSubtype">Subtype</label>
+                        </div>
+                        <div class="col form-floating">
+                            <select id="ddlCreditType" class="form-select dropdowns" aria-label="Credit Type" name="credit_type">
+                                <option label="Select..."></option>
+                                <option value="Credit">Credit</option>
+                                <option value="Non-Credit">Non-Credit</option>
+                                <option value="Unit">Unit</option>
+                            </select>
+                            <label for="ddlCreditType">Credit Type</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-2">
+                        <div class="col form-floating">
+                            <select id="ddlClassLevel" class="form-select dropdowns" aria-label="Class Level" name="class_level">
+                                <option label="Select..."></option>
+                                <option value="Freshman">Freshman</option>
+                                <option value="Junior">Junior</option>
+                                <option value="Progr">Progr</option>
+                                <option value="Senior">Senior</option>
+                                <option value="Sophomore">Sophomore</option>
+                            </select>
+                            <label for="ddlClassLevel">Class Level</label>
+                        </div>
+                        <div class="col form-floating">
+                            <select id="ddlCollege" class="form-select dropdowns" aria-label="College" name="college">
+                                <option label="Select..."></option>
+                                <option value="College of Arts">College of Arts</option>
+                                <option value="College of Science and Technology">College of Science and Technology</option>
+                            </select>
+                            <label for="ddlCollege">College</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-2">
+                        <div class="col form-floating">
+                            <select id="ddlDepartment" class="form-select dropdowns" aria-label="Department" name="department">
+                                <option label="Select..."></option>
+                                <option value="Arts and Archeology">Arts and Archeology</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Contemporary Art">Contemporary Art</option>
+                                <option value="English">English</option>
+                            </select>
+                            <label for="ddlDepartment">Department</label>
+                        </div>
+                        <div class="col form-floating">
+                            <select id="ddlPopulation" class="form-select dropdowns" aria-label="Population" name="population">
+                                <option label="Select..."></option>
+                                <option value="Day">Day</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Traditional">Traditional</option>
+                            </select>
+                            <label for="ddlPopulation">Population</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-2">
+                        <div class="col form-floating">
+                            <select id="ddlNonTraditional" class="form-select dropdowns" aria-label="Non-Traditional" name="non_traditional">
+                                <option label="Select..."></option>
+                                <option value="Arts Fall 2021">Arts Fall 2021</option>
+                                <option value="Arts Spring 2021">Arts Spring 2021</option>
+                                <option value="Arts Summer 2021">Arts Summer 2021</option>
+                                <option value="Humanities Fall 2021">Humanities Fall 2021</option>
+                                <option value="Humanities Fall 2022">Humanities Fall 2022</option>
+                                <option value="Humanities Fall 2023">Humanities Fall 2023</option>
+                                <option value="SciTech Fall 2021">SciTech Fall 2021</option>
+                                <option value="SciTech Spring 2021">SciTech Spring 2021</option>
+                            </select>
+                            <label for="ddlNonTraditional">Non Traditional</label>
+                        </div>
+                        <div class="col form-floating">
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top-0">
+                        <button type="button" class="btn btn-outline-primary text-uppercase fw-bold"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="reset" class="btn btn-outline-primary ms-2 me-2 text-uppercase fw-bold">Clear</button>
+                        <button type="submit" class="btn btn-primary text-uppercase fw-bold">Search</button>
+                    </div>        
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
