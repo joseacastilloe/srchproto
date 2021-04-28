@@ -3,6 +3,7 @@ const allResultsObject = [];
 
 //Manage search parameters
 courseList.forEach((item)=>{
+    arrayOfTermsForSearch[0] = arrayOfTermsForSearch[0].trim();
     var re = new RegExp(arrayOfTermsForSearch[0], "i");
     var courseCodeRegex = new RegExp(arrayOfTermsForSearch[2], "i");
 

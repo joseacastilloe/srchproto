@@ -10,7 +10,7 @@ $(document).ready(() => {
      */
     function findMatches(args, elements, filters) {
         // Prepare arguments for manipulation
-        let lowerArgs = args = args.toLowerCase();
+        let lowerArgs = args.toLowerCase().trim();
         const searchArgs = lowerArgs.split(' ');
 
         var matchResult = [];
